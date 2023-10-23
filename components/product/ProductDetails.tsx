@@ -41,7 +41,7 @@ export interface Props {
     name?: "concat" | "productGroup" | "product";
   };
 
-  id?: string
+  id?: string;
 }
 
 const WIDTH = 360;
@@ -64,7 +64,9 @@ function NotFound() {
   );
 }
 
-function ProductInfo({ page, layout, id }: { page: ProductDetailsPage } & Props) {
+function ProductInfo(
+  { page, layout, id }: { page: ProductDetailsPage } & Props,
+) {
   const platform = usePlatform();
   const {
     breadcrumbList,
